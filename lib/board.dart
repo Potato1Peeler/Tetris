@@ -40,7 +40,7 @@ class _GameBoardState extends State<GameBoard> {
     currentPiece.initializePiece();
 
     //frame refresh rate
-    Duration frameRate = const Duration(milliseconds: 800);
+    Duration frameRate = const Duration(milliseconds: 200); //Pieces speed (200 = fast)
     gameLoop(frameRate);
 
   }
