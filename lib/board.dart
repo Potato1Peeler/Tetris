@@ -20,7 +20,7 @@ class GameBoard extends StatefulWidget {
 class _GameBoardState extends State<GameBoard> {
   
   //current tetris piece
-  Piece currentPiece = Piece(type: Tetromino.T);
+  Piece currentPiece = Piece(type: Tetromino.T); //First piece to fall
 
   //current score
   int currentScore=0;
@@ -80,7 +80,8 @@ class _GameBoardState extends State<GameBoard> {
         TextButton(onPressed: (){
           //reset the game
           resetGame();
-
+          
+          //Game over message
           Navigator.pop(context);
         }, child: Text('Play again'))
       ],
